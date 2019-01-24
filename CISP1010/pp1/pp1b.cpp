@@ -4,6 +4,7 @@
  * This program calculates forces given mass and acceleration
  */
 #include <iostream>
+using namespace std;
 
 int main()
 {
