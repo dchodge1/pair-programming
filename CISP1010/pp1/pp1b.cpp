@@ -8,5 +8,15 @@ using namespace std;
 
 int main()
 {
+	double mass, acceleration, force;
+
+	cout << "Enter a mass (kg): ";
+	cin >> mass;
+	cout << "Enter an acceleration (m/s^2): ";
+	cin >> acceleration;
+
+	force = mass * acceleration;
+	
+	cout <<  "Total force (N): " << force << endl;
 	return (0);
 }
