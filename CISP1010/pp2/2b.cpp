@@ -12,15 +12,15 @@ int main(){
 	int i = 3, j = 10;
 	double x = 9.9, y = -0.6;
 
-	cout << i/j << endl;
-	cout << i%j << endl;
-	cout << j/i << endl;
-	cout << j%i << endl;
-	cout << x*i/j << endl;
-	cout << x*(i/j) << endl;
-	cout << x/y+i << endl;
-	cout << j+y/x << endl;
-	cout << (double)(i)/j+y << endl;
+	cout << "i/j is " << i/j << endl;
+	cout << "i%j is " << i%j << endl;
+	cout << "j/i is " << j/i << endl;
+	cout << "j%i is " << j%i << endl;
+	cout << "x*i/j is " << x*i/j << endl;
+	cout << "x*(i/j) is " << x*(i/j) << endl;
+	cout << "x/y+i is " << x/y+i << endl;
+	cout << "j+y/x is " << j+y/x << endl;
+	cout << "(double)(i)/j+y is " << (double)(i)/j+y << endl;
 
 	return(0);
 }
