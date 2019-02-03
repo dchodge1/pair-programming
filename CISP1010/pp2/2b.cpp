@@ -20,7 +20,7 @@ int main(){
 	cout << "x*(i/j) is " << x*(i/j) << endl;
 	cout << "x/y+i is " << x/y+i << endl;
 	cout << "j+y/x is " << j+y/x << endl;
-	cout << "(double)(i)/j+y is " << (double)(i)/j+y << endl;
+	cout << "static_cast<double>(i)/j+y is " << static_cast<double>(i)/j+y << endl;
 
 	return(0);
 }
