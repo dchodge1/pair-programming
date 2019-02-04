@@ -1,7 +1,8 @@
-/* 
+/*
+ * File: 2e.cpp 
  * Author: David Hodge
- * Assignment: 2e
  * Date: 2019/02/01
+ * Switch statement to print marital status
 */
 
 #include <iostream>
@@ -24,7 +25,6 @@ int main() {
 			break;
 		default:
 			cout << "Invalid status\n";
-			break;
 	}
 	return 0;
 }

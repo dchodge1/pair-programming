@@ -1,3 +1,9 @@
+/*
+ * File: 2a.cpp
+ * Author: David Hodge
+ * Date: 2019/02/01
+ * Displays Douglas Adam's quote with formatting
+ */
 #include <iostream>
 using namespace std;
 

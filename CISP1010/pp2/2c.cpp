@@ -1,7 +1,8 @@
 /*
+ * File: 2c.cpp
  * Author: David Hodge
- * Assignment: 2c
  * Date: 2019/02/01
+ * Conditionals to print various life milestones
 */
 
 #include <iostream>
