@@ -8,23 +8,23 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
 
 	int result = 1, 
-        base = 2, 
-        n;
+	    base = 2, 
+	    n;
     
-    cout << "Please enter n: ";
-    cin >> n;
+    	cout << "Please enter n: ";
+    	cin >> n;
 
-    if (n >= 0) {
-	    for (int i = 0; i < n; ++i) {
-		    cout << i << " " << result << endl;
-            result *= base;
-        }
+    	if (n >= 0) {
+		for (int i = 0; i < n; ++i) {
+			cout << i << " " << result << endl;
+            		result *= base;
+        	}
 
-        cout << n << " " << result << endl;
-    }
+        	cout << n << " " << result << endl;
+    	}
 
 	return(0);
 }
