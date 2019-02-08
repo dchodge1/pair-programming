@@ -1,3 +1,10 @@
+/*
+ * File: 3b.cpp
+ * Author: David Hodge
+ * Date: 2019/02/08
+ * Calculates and displays the 2 raised to some non-negative number
+ */
+
 #include <iostream>
 using namespace std;
 
@@ -10,10 +17,14 @@ int main(){
     cout << "Please enter n: ";
     cin >> n;
 
-	for(int i = 0; i < n; ++i){
-		result *= base;
-	}
+    if (n >= 0) {
+	    for (int i = 0; i < n; ++i) {
+		    cout << i << " " << result << endl;
+            result *= base;
+        }
 
-    cout << n << " " << result << endl;
+        cout << n << " " << result << endl;
+    }
+
 	return(0);
 }
