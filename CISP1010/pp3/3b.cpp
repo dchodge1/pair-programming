@@ -18,7 +18,7 @@ int main() {
     	cin >> n;
 
     	if (n >= 0) {
-		for (int i = 0; i < n; ++i) {
+		for (int i = 0; i < n; i++) {
 			cout << i << " " << result << endl;
             		result *= base;
         	}
