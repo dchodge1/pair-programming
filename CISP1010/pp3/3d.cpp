@@ -12,6 +12,8 @@ int main(){
 
 	char input;
 
+	cout << "H hardwood \nL laminate \nE engineered hardwood \nQ quit" << endl;
+
 	do{
 		cout << "Enter a menu selection: ";
 		cin >> input;
