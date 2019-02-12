@@ -11,6 +11,9 @@ using namespace std;
 int main(){
 	double hours, rate, salary;
 
+	cout << "Enter amount of hours: ";
+        cin >> hours;
+
 	while(hours > 0){
 		cout << "Enter amount of hours: ";
 		cin >> hours;
