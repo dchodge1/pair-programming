@@ -15,9 +15,6 @@ int main(){
         cin >> hours;
 
 	while(hours > 0){
-		cout << "Enter amount of hours: ";
-		cin >> hours;
-
 		cout << "Enter rate: ";
 		cin >> rate;
 
@@ -28,7 +25,10 @@ int main(){
 			salary = 40*rate+(hours - 40)*rate*1.5;
 		}
 
-		cout << "Salary: $" << salary << endl;
+		cout << "Salary: $" << salary << endl << endl;
+
+		cout << "Enter amount of hours: ";
+                cin >> hours;
 	}
 	return(0);
 }
