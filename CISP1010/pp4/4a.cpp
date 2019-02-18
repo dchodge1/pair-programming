@@ -17,8 +17,8 @@ int main() {
     int face, suit;
 
     srand(time(0));
-    face = (rand() % 12) + 1;
-    suit = (rand() % 3) + 1;
+    face = rand() % 13;
+    suit = rand() % 4;
     cout << getFace(face) << " of " << getSuit(suit) << endl;
     return 0;
 }
