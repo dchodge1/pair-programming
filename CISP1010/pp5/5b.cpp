@@ -9,23 +9,7 @@
 
 using namespace std;
 
-void figurelt(double in){
-	if(fmod(in,2) == 0){
-		cout << "even, ";
-	}
-	else{
-		cout << "not even, ";
-	}
-
-	if(in >= 0){
-		cout << "+, ";
-	}
-	else{
-		cout << "-, ";
-	}
-
-	cout << round(in) << endl;
-}
+void figurelt(double in);
 
 int main(){
 	double input;
@@ -34,4 +18,22 @@ int main(){
 	cin >> input;
 
 	figurelt(input);
+}
+
+void figurelt(double in){
+        if(fmod(in,2) == 0){
+                cout << "even, ";
+        }
+        else{
+                cout << "not even, ";
+        }
+
+        if(in >= 0){
+                cout << "+, ";
+        }
+        else{
+                cout << "-, ";
+        }
+
+        cout << round(in) << endl;
 }
