@@ -20,9 +20,8 @@ int main() {
     int x, y;
     cout << "Please enter two integers seperated by a space: ";
     cin >> x >> y;
-    cout << "Pre-swap x = " << x << " and y = " << y << endl;
     myswap(x, y);
-    cout << "Post-swap x = " << x << " and y = " << y << endl;
+    cout << x << " " << y << endl;
     return 0;
 }
 
