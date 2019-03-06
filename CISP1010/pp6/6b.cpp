@@ -8,6 +8,8 @@
 #include <iostream>
 using namespace std;
 
+// readline - Loops through all characters from standard input
+// until it reads a new line character
 void readline();
 
 int main() {
