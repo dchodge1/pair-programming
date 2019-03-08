@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -24,13 +25,12 @@ int main() {
   	cout << "Please enter an output file name: ";
   	cin >> outputFile;
 
-
-  	fileIn.open(inputFile);
+  	fileIn.open(inputFile.c_str());
   	if(!fileIn.fail()){
 
 		// https://stackoverflow.com/questions/2390912/checking-for-an-empty-file-in-c?answertab=votes#tab-top
     		if(fileIn.peek() != ifstream::traits_type::eof()){
-      			fileOut.open(outputFile);
+      			fileOut.open(outputFile.c_str());
 
       			do{
         			fileIn >> temp;
@@ -53,5 +53,5 @@ int main() {
 
 	fileIn.close();
 	fileOut.close();
-	return (0);
+    return (0);
 }
