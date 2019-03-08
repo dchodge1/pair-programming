@@ -36,7 +36,6 @@ int main() {
         			fileIn >> temp;
         			if(!fileIn.eof()){
 
-					// https://stackoverflow.com/questions/35029233/set-precision-with-fstream-to-output-file-format-double
           				fileOut << "The number is $" << fixed << setprecision(2) << temp << endl;
         			}
       			}
