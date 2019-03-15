@@ -6,17 +6,19 @@
 
 #include <iostream>
 
+const int ARRAY_SIZE = 8;
+
 using namespace std;
 
 void selectSort(double inputArray[], int arraySize);
 
 int main(){
 
-	double array[8] = {12, 1, 0, -5, 6, 8, 18, 10};
+	double array[ARRAY_SIZE] = {12, 1, 0, -5, 6, 8, 18, 10};
 
-	selectSort(array, 8);
+	selectSort(array, ARRAY_SIZE);
 
-	for(int i = 0; i < 8; i++){
+	for(int i = 0; i < ARRAY_SIZE; i++){
                 cout << array[i] << " ";
         }
 	cout << endl;
