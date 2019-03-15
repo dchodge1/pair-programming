@@ -30,10 +30,8 @@ int main() {
             cin >> value;
         }
     } 
-    for (int i = 0; i < MAX_AMOUNTS; i++) {
-        if (i < count) {
-            printMoney(amounts[i]);
-        }
+    for (int i = 0; i < count; i++) {
+        printMoney(amounts[i]);
     }
     return 0;
 }
