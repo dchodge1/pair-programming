@@ -8,39 +8,31 @@
 
 using namespace std;
 
-void selectSort(double inputArray[], int arraySize);
+void selectSort(double a[], int n);
 
 int main(){
 
 	double array[8] = {12, 1, 0, -5, 6, 8, 18, 10};
-
 	selectSort(array, 8);
 
-	for(int i = 0; i < 8; i++){
-                cout << array[i] << " ";
-        }
-	cout << endl;
+	for(int i = 0; i < 8; i++) {
+        cout << array[i] << " ";
+    }
 
+	cout << endl;
 	return(0);
 }
 
-void selectSort(double inputArray[], int arraySize){
-	double smallest, largest;
-
-	for(int i = 0; i < arraySize; i++){
-		largest = inputArray[i];
-
-		for(int j = 0; j < arraySize; j++){
-			if(largest < inputArray[j]){
-				int temp = largest;
-				largest = inputArray[j];
-				inputArray[j] = temp;
-			}
-			else if(smallest > inputArray[j]){
-				smallest = inputArray[j];
-			}
-		}
-		inputArray[i] = largest;
-	}
-	inputArray[arraySize-1] = largest;
+void selectSort(double a[], int n) {
+    int temp;
+    int nMinus1 = n - 1;
+    for(int top = 0; top < nMinus1; top++) {
+        int minI = top;
+        for(int i = minI + 1; i < n; i++) {
+            if (a[i] < a[minI]) minI = i;
+        }
+        temp = a[top];
+        a[top] = a[minI];
+        a[minI] = temp;    
+    }
 }
