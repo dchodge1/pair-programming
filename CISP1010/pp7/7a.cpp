@@ -21,14 +21,23 @@ int main() {
     //double grades[MAX_STUDENTS] = {56.8,65.7,87.8,96.1,99.9};
     //case 3
     double grades[MAX_STUDENTS] = {56.8,65.7,87.8,88.8,96.1,99.9};
-    double total, average;
+    double total, average, median;
     for (int i = 0; i < MAX_STUDENTS; i++) {
        total += grades[i];
     }
     average = total/MAX_STUDENTS;
+
+    if(MAX_STUDENTS % 2 == 0){
+       median = (grades[MAX_STUDENTS/2-1]+grades[MAX_STUDENTS/2])/2;
+    }
+    else{
+       median = grades[MAX_STUDENTS/2];
+    }
+
     cout.setf(ios::showpoint);
     cout.setf(ios::fixed);
     cout.precision(2);
     cout << "Average: " << average << endl;
+    cout << "Median: " << median << endl;
     return 0;
 }
