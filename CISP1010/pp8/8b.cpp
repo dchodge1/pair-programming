@@ -1,3 +1,9 @@
+/*
+	8b.cpp
+	Stephen Souther
+	April 1, 2019
+*/
+
 #include <iostream>
 #include <cstring>
 
