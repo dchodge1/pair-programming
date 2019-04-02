@@ -11,13 +11,14 @@
 #include <ctime>
 using namespace std;
 
+const int LIMIT = 4;
 void getAge(char age[]);
 bool checkValidity(char age[]);
 bool convertAge(char age[], int& numericAge);
 int getCurrentYear();
 
 int main() {
-    char strAge[4];
+    char strAge[LIMIT];
     int age, currentYear, diff;
     getAge(strAge);
     if (checkValidity(strAge) && convertAge(strAge, age)) {
@@ -32,7 +33,7 @@ int main() {
 
 void getAge(char age[]) {
     cout << "Please enter an age: ";
-    cin.getline(age, 4);
+    cin.getline(age, LIMIT);
 }
 
 bool checkValidity(char age[]) {
@@ -62,5 +63,5 @@ bool convertAge(char age[], int& numericAge) {
 int getCurrentYear() {
     time_t currentTime = time(0);
     tm *nowtm = localtime(&currentTime);
-    return 1900 +  nowtm->tm_year;
+    return 1900 + nowtm->tm_year;
 }
