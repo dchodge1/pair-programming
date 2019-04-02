@@ -8,18 +8,24 @@
 #include <cstring>
 #include <cstdlib>
 #include <cctype>
+#include <ctime>
 using namespace std;
 
 void getAge(char age[]);
 bool checkValidity(char age[]);
-int convertAge(char age[]);
+bool convertAge(char age[], int& numericAge);
+int getCurrentYear();
 
 int main() {
     char strAge[4];
-    int age;
+    int age, currentYear, diff;
     getAge(strAge);
-    if (checkValidity(strAge)) {
-        age = convertAge(strAge);
+    if (checkValidity(strAge) && convertAge(strAge, age)) {
+        currentYear = getCurrentYear();
+        diff = currentYear - age;
+        cout << "Born in " << diff << endl;
+    } else {
+        cout << "Age must be a positive integer" << endl;
     }
     return 0;
 }
@@ -38,6 +44,23 @@ bool checkValidity(char age[]) {
     return validity;
 }
 
-int convertAge(char age[]) {
-    int numericAge = atoi(age);
+bool convertAge(char age[], int& numericAge) {
+    int n = atoi(age);
+    if (n > 0) {
+        numericAge = n;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*
+ * References:
+ *  http://www.cplusplus.com/reference/ctime/time/
+ *  http://www.cplusplus.com/reference/ctime/localtime/
+ */
+int getCurrentYear() {
+    time_t currentTime = time(0);
+    tm *nowtm = localtime(&currentTime);
+    return 1900 +  nowtm->tm_year;
 }
