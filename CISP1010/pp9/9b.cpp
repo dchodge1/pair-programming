@@ -13,28 +13,28 @@
 
 using namespace std;
 
-void figureIt(double *in, string *even, string *sign, int *rounded);
+void figureIt(double in, string *even, string *sign, int *rounded);
 
 int main() {
     double input;
     string even, sign;
     int rounded;
     
-    cout << "Pease enter a number (0 to quit): ";
+    cout << "Please enter a number (0 to quit): ";
     cin >> input;
 
     while (input != 0) {
-        figureIt(&input, &even, &sign, &rounded);
+        figureIt(input, &even, &sign, &rounded);
         cout << even << sign << rounded << endl; 
-        cout << "Please enter a number: ";
+        cout << "Please enter a number (0 to quit): ";
         cin >> input;
     } 
     return 0;
 }
 
-void figureIt(double *in, string *even, string *sign, int *rounded) {
-    (fmod(*in, 2) == 0) ? *even = "Even, " : *even = "Not even, ";
-    (*in >= 0) ? *sign = "+, " : *sign = "-, "; 
-    *rounded = round(*in);
+void figureIt(double in, string *even, string *sign, int *rounded) {
+    *even = fmod(in, 2) == 0 ? "Even, " : "Not even, ";
+    *sign = in >= 0 ? "+, " : "-, "; 
+    *rounded = round(in);
 }
 
